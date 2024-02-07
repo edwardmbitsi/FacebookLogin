@@ -156,20 +156,23 @@ footer small {
         align-items: center; /* Center items vertically */
     }
   
-   
-    
     .colm-logo, .colm-form {
         flex: 0 0 100%;
         align-items: center; /* Center items vertically */
         text-align: center;
         font-size: 15px;
         padding: 20px;
-
     }
-    .colm-form {
-        margin-bottom: 250px;
+    
+    p{
+        margin-bottom: 60px;
+    }
+    /* Adjust margin or padding to ensure the logo is not cut out */
+    .colm-logo {
+        margin-bottom: 20px; /* Adjust as needed */
     }
 }
+
 
 .page_404{ padding:40px 0; background:#fff; font-family: 'Arvo', serif;
 }

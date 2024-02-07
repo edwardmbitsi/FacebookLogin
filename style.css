@@ -1,0 +1,202 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+           
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+}
+
+main {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    height: 10vh;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.colm-logo {
+    flex: 0 0 45%;
+    text-align: left;
+}
+
+.colm-logo img {
+    max-width: 100%;
+}
+
+.colm-form {
+    flex: 0 0 45%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-container input,
+.form-container button {
+    width: 100%;
+    margin: 5px 0;
+    height: 45px;
+    font-size: 16px;
+}
+
+.form-container input {
+    border: 1px solid #dddfe2;
+    color: #1d2129;
+    padding: 0 8px;
+    outline: none;
+}
+
+.form-container input:focus {
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px #e7f3ff;
+}
+
+.btn-login,
+.btn-new {
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 0 16px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.btn-new {
+    background-color: #42b72a;
+}
+
+.forgot-password {
+    display: block;
+    color: #1877f2;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px 0 20px;
+    border-bottom: 1px solid #dadde1;
+}
+
+.footer-contents {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+footer ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+footer ol:first-child {
+    border-bottom: 1px solid #dddfe2;
+}
+           
+footer ol:first-child li:last-child button {
+    background-color: #f5f6f7;
+    border: 1px solid #ccd0d5;
+    outline: none;
+    color: #4b4f56;
+    padding: 0 8px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+footer ol li {
+    padding-right: 15px;
+    font-size: 12px;
+    color: #385898;
+}
+
+footer ol li a {
+    text-decoration: none;
+    color: #385898;
+}
+
+footer ol li a:hover {
+    text-decoration: underline;
+}
+
+footer small {
+    font-size: 11px;
+}
+
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center; /* Center items vertically */
+    }
+  
+   
+    
+    .colm-logo, .colm-form {
+        flex: 0 0 100%;
+        align-items: center; /* Center items vertically */
+        text-align: center;
+        font-size: 15px;
+        padding: 20px;
+
+    }
+    .colm-form {
+        margin-bottom: 250px;
+    }
+}
+
+.page_404{ padding:40px 0; background:#fff; font-family: 'Arvo', serif;
+}
+
+.page_404  img{ width:100%;}
+
+.four_zero_four_bg{
+ 
+ background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    height: 400px;
+    background-position: center;
+ }
+ 
+ 
+ .four_zero_four_bg h1{
+ font-size:80px;
+ }
+ 
+  .four_zero_four_bg h3{
+			 font-size:80px;
+			 }
+			 
+			 .link_404{			 
+	color: #fff!important;
+    padding: 10px 20px;
+    background: #1877f2;
+    margin: 20px 0;
+    display: inline-block;}
+	.contant_box_404{ margin-top:-50px;}
+
